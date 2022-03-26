@@ -5,9 +5,3 @@
   text-align: center;
   transition: all .3s ease;
 }
-
-.element__image:hover {
-  opacity: .9;
-  cursor: pointer;
-  transform: scale(1.01);
-}
