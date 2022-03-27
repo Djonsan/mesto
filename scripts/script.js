@@ -4,8 +4,8 @@ let openPopupButton = document.querySelector('.profile__btn-edit');
 let closePopupButton = document.querySelector('.popup__btn-close');
 let profileName = document.querySelector('.profile__name');
 let profileAbout = document.querySelector('.profile__about');
-let inputName = document.querySelector('.popup__input-profileName');
-let inputAbout = document.querySelector('.popup__input-profileAbout');
+let inputName = document.querySelector('.popup__input_type_name');
+let inputAbout = document.querySelector('.popup__input_type_about');
 
 function openPopup() {
   popup.classList.add('popup_opened');
