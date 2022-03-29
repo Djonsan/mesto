@@ -20,6 +20,7 @@ const cardTemplate = document.querySelector('#card-template').content;
 
 const popupPhotos = document.querySelector('.popup_photos');
 const closePopupPhotos = popupPhotos.querySelector('.popup__btn-close');
+const popupPhotosImage = document.querySelector('.popup__image');
 
 
 function openPopup(popupElement) {
@@ -72,7 +73,6 @@ function handleSubmitCard(evt) {
 }
 
 function openPopupPhotos(evt) {
-  const popupPhotosImage = document.querySelector('.popup__image');
 
   popupPhotosImage.src = evt.target.src;
   popupPhotosImage.alt = evt.target.alt;
