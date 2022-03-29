@@ -17,141 +17,137 @@
           alt="Логотип Mesto"
         />
       </header>
-      <main class="container">
+      <main class="content">
+
         <section class="profile">
-          <img class="profile__avatar" src="./images/profile/avatar.jpg" alt="Аватар профиля"/>
+          <img
+            class="profile__avatar"
+            src="./images/profile/avatar.jpg"
+            alt="Аватар профиля"
+          />
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__btn-edit" type="button" aria-label="Редактировать профиль"></button>
+            <button
+              class="profile__btn-edit"
+              type="button"
+              aria-label="Редактировать профиль"
+            ></button>
             <p class="profile__about">Исследователь океана</p>
           </div>
-          <button class="profile__btn-add" type="button" aria-label="Обновить фотографию"></button>
+          <button
+            class="profile__btn-add"
+            type="button"
+            aria-label="Обновить фотографию"
+          ></button>
         </section>
 
         <section class="elements">
-          <ul class="elements__list">
-            <li class="element">
-              <figure class="element__figure">
-                <img
-                  class="element__image"
-                  src="./images/elements/photo-grid-karachayevsk.jpg"
-                  alt="Кирилл Першин, Сентинский храм, г. Карачевск (фото)"
-                />
-                <figcaption class="element__info">
-                  <h2 class="element__caption">Карачаевск</h2>
-                  <button
-                    class="element__btn-like"
-                    type="button"
-                    aria-label="Нравится"
-                  ></button>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="element">
-              <figure class="element__figure">
-                <img
-                  class="element__image"
-                  src="./images/elements/photo-grid-elbrus.jpg"
-                  alt="Кирилл Першин, Гора Эльбрус (фото)"
-                />
-                <figcaption class="element__info">
-                  <h2 class="element__caption">Гора Эльбрус</h2>
-                  <button
-                    class="element__btn-like"
-                    type="button"
-                    aria-label="Нравится"
-                  ></button>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="element">
-              <figure class="element__figure">
-                <img
-                  class="element__image"
-                  src="./images/elements/photo-grid-dombay.jpg"
-                  alt="Кирилл Першин, Домбай (фото)"
-                />
-                <figcaption class="element__info">
-                  <h2 class="element__caption">Домбай</h2>
-                  <button
-                    class="element__btn-like"
-                    type="button"
-                    aria-label="Нравится"
-                  ></button>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="element">
-              <figure class="element__figure">
-                <img
-                  class="element__image"
-                  src="./images/elements/photo-grid-elbrus.jpg"
-                  alt="Кирилл Першин, Гора Эльбрус (фото)"
-                />
-                <figcaption class="element__info">
-                  <h2 class="element__caption">Гора Эльбрус</h2>
-                  <button
-                    class="element__btn-like"
-                    type="button"
-                    aria-label="Нравится"
-                  ></button>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="element">
-              <figure class="element__figure">
-                <img
-                  class="element__image"
-                  src="./images/elements/photo-grid-dombay.jpg"
-                  alt="Кирилл Першин, Домбай (фото)"
-                />
-                <figcaption class="element__info">
-                  <h2 class="element__caption">Домбай</h2>
-                  <button
-                    class="element__btn-like"
-                    type="button"
-                    aria-label="Нравится"
-                  ></button>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="element">
-              <figure class="element__figure">
-                <img
-                  class="element__image"
-                  src="./images/elements/photo-grid-karachayevsk.jpg"
-                  alt="Кирилл Першин, Сентинский храм, г. Карачевск (фото)"
-                />
-                <figcaption class="element__info">
-                  <h2 class="element__caption">Карачаево-Черкесия</h2>
-                  <button
-                    class="element__btn-like"
-                    type="button"
-                    aria-label="Нравится"
-                  ></button>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
+          <ul class="elements__list"></ul>
         </section>
+
       </main>
       <footer class="footer">
         <p class="footer__author">&copy; 2022. Mesto Russia</p>
       </footer>
     </div>
-    <div class="popup">
+
+    <div class="popup popup_edit">
       <div class="popup__container">
-        <form class="popup__form" name="profile-edit">
+        <form class="popup__form" name="profileData">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__fieldset">
-            <input class="popup__input popup__input_type_name" type="text" name="profileName" placeholder="Имя" required="" />
-            <input class="popup__input popup__input_type_about" type="text" name="profileAbout" placeholder="О себе" required="" />
-            <button class="popup__btn-save" type="submit" aria-label="Сохранить">Сохранить</button>
+            <input
+              class="popup__input popup__input_type_name"
+              type="text"
+              name="profileName"
+              placeholder="Имя"
+              required=""
+            />
+            <input
+              class="popup__input popup__input_type_about"
+              type="text"
+              name="profileAbout"
+              placeholder="О себе"
+              required=""
+            />
+            <button
+              class="popup__btn-save"
+              type="submit"
+              aria-label="Сохранить"
+            >
+              Сохранить
+            </button>
           </fieldset>
         </form>
-        <button class="popup__btn-close" type="button" aria-label="Закрыть"></button>
+        <button
+          class="popup__btn-close"
+          type="button"
+          aria-label="Закрыть"
+        ></button>
       </div>
     </div>
+
+    <div class="popup popup_add">
+      <div class="popup__container">
+        <form class="popup__form" name="placeData">
+          <h2 class="popup__title">Новое место</h2>
+          <fieldset class="popup__fieldset">
+            <input
+              class="popup__input"
+              type="text"
+              name="placeName"
+              placeholder="Название"
+              required=""
+            />
+            <input
+              class="popup__input"
+              type="url"
+              name="placeLink"
+              placeholder="Ссылка на картинку"
+              required=""
+            />
+            <button class="popup__btn-save" type="submit" title="Создать">
+              Создать
+            </button>
+          </fieldset>
+        </form>
+        <button class="popup__btn-close" type="button" title="Закрыть"></button>
+      </div>
+    </div>
+
+    <div class="popup popup_photos">
+      <div class="popup__content">
+        <img class="popup__image" src="#" alt="#" />
+        <h2 class="popup__description"></h2>
+        <button class="popup__btn-close" type="button" title="Закрыть"></button>
+      </div>
+    </div>
+
+    <template id="card-template">
+      <figure class="element">
+        <img
+          class="element__image"
+          src="."
+          alt=""
+          title="Посмотреть в полном размере"
+        />
+        <button
+          class="element__btn-trash"
+          type="button"
+          title="Удалить"
+        ></button>
+        <figcaption class="element__info">
+          <h2 class="element__caption"></h2>
+          <button
+            class="element__btn-like"
+            type="button"
+            title="Нравится"
+          ></button>
+        </figcaption>
+      </figure>
+    </template>
+
+    <script src="./scripts/initialCards.js"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
