@@ -21,9 +21,9 @@
 
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__image/element__image.css);
-@import url(../blocks/element/__btn-trash/element__btn-trash.css);
 @import url(../blocks/element/__info/element__info.css);
 @import url(../blocks/element/__caption/element__caption.css);
+@import url(../blocks/element/__btn-trash/element__btn-trash.css);
 @import url(../blocks/element/__btn-like/element__btn-like.css);
 @import url(../blocks/element/__btn-like/_active/element__btn-like_active.css);
 
