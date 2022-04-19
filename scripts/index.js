@@ -8,8 +8,8 @@ const popups = Array.from(document.querySelectorAll('.popup'));
 
 const popupEdit = document.querySelector('.popup_edit');
 const popupEditForm = popupEdit.querySelector('[name="profileData"]');
-const inputName = popupEdit.querySelector('.popup__input_type_name');
-const inputAbout = popupEdit.querySelector('.popup__input_type_about');
+const inputName = popupEdit.querySelector('[name="profileName"]');
+const inputAbout = popupEdit.querySelector('[name="profileAbout"]');
 
 const popupAdd = document.querySelector('.popup_add');
 const popupAddForm = popupAdd.querySelector('[name="placeData"]');
