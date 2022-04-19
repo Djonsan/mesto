@@ -18,7 +18,6 @@
         />
       </header>
       <main class="content">
-
         <section class="profile">
           <img
             class="profile__avatar"
@@ -30,23 +29,20 @@
             <button
               class="profile__btn-edit"
               type="button"
-              aria-label="Редактировать профиль"
+              title="Редактировать профиль"
             ></button>
             <p class="profile__about">Исследователь океана</p>
           </div>
           <button
             class="profile__btn-add"
             type="button"
-            aria-label="Обновить фотографию"
+            title="Обновить фотографию"
           ></button>
         </section>
 
         <section class="elements">
-          <ul class="elements__list">
-
-          </ul>
+          <ul class="elements__list"></ul>
         </section>
-
       </main>
       <footer class="footer">
         <p class="footer__author">&copy; 2022. Mesto Russia</p>
@@ -55,63 +51,69 @@
 
     <div class="popup popup_edit">
       <div class="popup__container">
-        <form class="popup__form" name="profileData">
+        <form class="popup__form" name="profileData" novalidate>
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__fieldset">
             <input
               class="popup__input popup__input_type_name"
+              id="profile-name"
               type="text"
               name="profileName"
               placeholder="Имя"
-              required=""
+              minlength="2"
+              maxlength="40"
+              required
             />
+            <span class="popup__input-error profile-name-error"></span>
             <input
               class="popup__input popup__input_type_about"
+              id="profile-about"
               type="text"
               name="profileAbout"
               placeholder="О себе"
-              required=""
+              minlength="2"
+              maxlength="200"
+              required
             />
-            <button
-              class="popup__btn-save"
-              type="submit"
-              aria-label="Сохранить"
-            >
-              Сохранить
-            </button>
+            <span class="popup__input-error profile-about-error"></span>
           </fieldset>
+          <button class="popup__btn-save" type="submit" title="Сохранить">
+            Сохранить
+          </button>
         </form>
-        <button
-          class="popup__btn-close"
-          type="button"
-          aria-label="Закрыть"
-        ></button>
+        <button class="popup__btn-close" type="button" title="Закрыть"></button>
       </div>
     </div>
 
     <div class="popup popup_add">
       <div class="popup__container">
-        <form class="popup__form" name="placeData">
+        <form class="popup__form" name="placeData" novalidate>
           <h2 class="popup__title">Новое место</h2>
           <fieldset class="popup__fieldset">
             <input
               class="popup__input"
+              id="place-name"
               type="text"
               name="placeName"
               placeholder="Название"
-              required=""
+              minlength="2"
+              maxlength="30"
+              required
             />
+            <span class="popup__input-error place-name-error"></span>
             <input
               class="popup__input"
+              id="place-link"
               type="url"
               name="placeLink"
               placeholder="Ссылка на картинку"
-              required=""
+              required
             />
-            <button class="popup__btn-save" type="submit" title="Создать">
-              Создать
-            </button>
+            <span class="popup__input-error place-link-error"></span>
           </fieldset>
+          <button class="popup__btn-save" type="submit" title="Создать">
+            Создать
+          </button>
         </form>
         <button class="popup__btn-close" type="button" title="Закрыть"></button>
       </div>
@@ -149,7 +151,8 @@
       </figure>
     </template>
 
-    <script src="./scripts/initialCards.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/validate.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 .popup__container {
-  display: flex;
   box-sizing: border-box;
   position: relative;
   width: calc((100vw - 320px) / (1280 - 320) * (430 - 282) + 282px);
