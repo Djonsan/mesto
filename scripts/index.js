@@ -74,9 +74,9 @@ function handleSubmitCard(evt) {
     link: inputPlaceLink.value
   });
   cardsElement.prepend(cardElement);
-  popupAddForm.reset();
-  toggleButtonState(inputList, buttonElement, classData.disableButtonClass);
   closePopup(popupAdd);
+  toggleButtonState(inputList, buttonElement, classData.disableButtonClass);
+  popupAddForm.reset();
 }
 
 function openPopupPhotos(evt) {
@@ -110,10 +110,7 @@ function closePopupEscapeClick(evt) {
 
 popups.forEach((element) => {
   element.addEventListener('mousedown', function (evt) {
-    if (evt.target.classList.contains('popup_opened')) {
-      closePopup(element);
-    }
-    if (evt.target.classList.contains('popup__btn-close')) {
+    if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__btn-close')) {
       closePopup(element);
     }
   });
