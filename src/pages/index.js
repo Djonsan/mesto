@@ -70,12 +70,11 @@ popupNewPlaceValidator.enableValidation();
 profileEditButton.addEventListener('click', () => {
   const userInfoData = userInfo.getUserInfo();
   const profileForm = popupProfile.getFormElement();
-  profileForm.elements.name.value = userInfoData.userName;
-  profileForm.elements.description.value = userInfoData.userDescription;
+  profileForm.elements.name = userInfoData.userName;
+  profileForm.elements.description = userInfoData.userDescription;
   popupProfileValidator.resetValidation();
   popupProfile.open();
 });
-
 
 addCardButton.addEventListener('click', () => {
   popupNewPlaceValidator.toggleButtonState();

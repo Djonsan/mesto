@@ -8,7 +8,7 @@ export default class UserInfo {
     return {
       userName: this._userNameElement.textContent,
       userDescription: this._userDescriptionElement.textContent
-    }
+    };
   }
 
   setUserInfo({ userName, userDescription }) {
