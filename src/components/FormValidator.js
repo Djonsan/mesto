@@ -38,8 +38,16 @@ export default class FormValidator {
   _hideInputError(inputElement) {
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
     errorElement.classList.remove(this._classData.activeErrorClass);
-    errorElement.textContent = "";
+    errorElement.textContent = '';
     inputElement.classList.remove(this._classData.inputErrorClass);
+  }
+
+  resetValidation() {
+    this.toggleButtonState();
+
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement)
+    });
   }
 
   toggleButtonState() {
