@@ -1,11 +1,10 @@
 {
   "name": "mesto",
-  "version": "1.0.0",
-  "description": "Учебный проект Яндекс.Практикума",
+  "version": "0.0.1",
+  "description": "Учебный проект, Яндекс Практикум.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production",
-    "dev": "webpack serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
