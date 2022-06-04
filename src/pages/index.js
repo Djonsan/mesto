@@ -68,7 +68,6 @@ popupNewPlaceValidator.enableValidation();
 
 
 const profileForm = popupProfile.getFormElement();
-console.log(profileForm.elements)
 const nameInput = profileForm.querySelector('#profile-name')
 const aboutInput = profileForm.querySelector('#profile-about')
 
