@@ -67,11 +67,15 @@ const popupNewPlaceValidator = new FormValidator(classData, popupNewPlace.getFor
 popupNewPlaceValidator.enableValidation();
 
 
+const profileForm = popupProfile.getFormElement();
+console.log(profileForm.elements)
+const nameInput = profileForm.querySelector('#profile-name')
+const aboutInput = profileForm.querySelector('#profile-about')
+
 profileEditButton.addEventListener('click', () => {
   const userInfoData = userInfo.getUserInfo();
-  const profileForm = popupProfile.getFormElement();
-  profileForm.elements.name = userInfoData.userName;
-  profileForm.elements.description = userInfoData.userDescription;
+  nameInput.value = userInfoData.userName;
+  aboutInput.value = userInfoData.userDescription;
   popupProfileValidator.resetValidation();
   popupProfile.open();
 });
