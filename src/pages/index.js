@@ -46,7 +46,7 @@ cards.renderItems();
 const popupProfile = new PopupWithForm(popupProfileSelector, (evt) => {
   evt.preventDefault();
   const formValues = popupProfile.getFormValues();
-  userInfo.setUserInfo({ userName: formValues.title, userDescription: formValues.subtitle });
+  userInfo.setUserInfo({ userName: formValues.profileName, userDescription: formValues.profileAbout });
   popupProfile.close();
 });
 popupProfile.setEventListener();
