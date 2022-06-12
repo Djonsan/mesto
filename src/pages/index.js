@@ -40,7 +40,7 @@ api.getPageNeedData().then((responses) => {
   const [cardData, userData] = responses;
   userInfo.setUserInfo({ userName: userData.name, userDescription: userData.about });
   userInfo.setUserAvatar({ userAvatarLink: userData.avatar });
-  userInfo.saveUserId(userData._id);
+  //userInfo.saveUserId(userData._id);
   cards.renderItems(cardData);
 }).catch((err) => {
   console.error(err);
@@ -55,12 +55,11 @@ const cards = new Section({
 }, cardsContainerSelector);
 
 
-const popupUpdateAvatar = new PopupWithForm(popupUpdateAvatarSelector, (evt) => {
+const popupUpdateAvatar = new PopupWithForm(popupUpdateAvatarSelector, (formData) => {
   evt.preventDefault();
   popupUpdateAvatar.isLoadingMessage(true);
-  const formValues = popupUpdateAvatar.getFormValues();
-  api.updateProfileAvatar({ avatar: formValues.url }).then((data) => {
-    userInfo.setUserAvatar({ userAvatarLink: data.avatar });
+  api.updateProfileAvatar(formData).then((data) => {
+    userInfo.setUserAvatar(data);
     popupUpdateAvatar.close();
   }).catch((err) => {
     console.error(err);
@@ -77,12 +76,11 @@ document.querySelector(profileAvatarEditButton).addEventListener('click', () => 
 });
 
 
-const popupProfile = new PopupWithForm(popupProfileSelector, (evt) => {
+const popupProfile = new PopupWithForm(popupProfileSelector, (fromData) => {
   evt.preventDefault();
   popupProfile.isLoadingMessage(true);
-  const formValues = popupProfile.getFormValues();
-  api.updateUserInfo({ name: formValues.title, about: formValues.subtitle }).then((data) => {
-    userInfo.setUserInfo({ userName: data.name, userDescription: data.about });
+  api.updateUserInfo(fromData).then((data) => {
+    userInfo.setUserInfo(data);
     popupProfile.close();
   }).catch((err) => {
     console.error(err);
@@ -95,14 +93,11 @@ const popupProfileValidator = new FormValidator(classData, popupProfile.getFormE
 popupProfileValidator.enableValidation();
 
 
-const popupNewPlace = new PopupWithForm(popupNewPlaceSelector, (evt) => {
+const popupNewPlace = new PopupWithForm(popupNewPlaceSelector, (fromData) => {
   evt.preventDefault();
   popupNewPlace.isLoadingMessage(true);
-  const formValues = popupNewPlace.getFormValues();
-  const item = { name: formValues.name, link: formValues.url };
-  api.addNewCard(item).then((newCardItem) => {
-    const cardElement = createNewCard(newCardItem, cardSelector);
-    cards.addNewItem(cardElement);
+  api.addNewCard(fromData).then((data) => {
+    cards.addNewItem(data);
     popupNewPlace.close();
   }).catch((err) => {
     console.error(err);
